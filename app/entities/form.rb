@@ -7,7 +7,7 @@ module Entities
 
     def initialize(form_fields:)
       @id          = SecureRandom.random_number(100)
-      @fields = []
+      @fields      = []
       create_form_field(form_fields)
     end
 
