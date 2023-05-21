@@ -68,12 +68,16 @@ RSpec.describe Entities::Orientation do
 
       let(:form_fields) do
         [
-          Entities::FormField.new(type_input: Entities::Enums::TypeInput::TYPE[:MULTIPLE_CHOICE],
-                                  name: 'xxx',
-                                  format_multiple_choice: Entities::FormatMultipleChoice.new(format: Entities::Enums::Format::TYPE[:UMA_OPCAO])),
-          Entities::FormField.new(type_input: Entities::Enums::TypeInput::TYPE[:MULTIPLE_CHOICE],
-                                  name: 'xxx',
-                                  format_multiple_choice: Entities::FormatMultipleChoice.new(format: Entities::Enums::Format::TYPE[:UMA_OPCAO]))
+          {
+            type_input: Entities::Enums::TypeInput::TYPE[:MULTIPLE_CHOICE],
+            name: 'xxx',
+            format_multiple_choice: Entities::Enums::Format::TYPE[:UMA_OPCAO]
+          },
+          {
+            type_input: Entities::Enums::TypeInput::TYPE[:MULTIPLE_CHOICE],
+            name: 'xxx',
+            format_multiple_choice: Entities::Enums::Format::TYPE[:UMA_OPCAO]
+          }
         ]
       end
 

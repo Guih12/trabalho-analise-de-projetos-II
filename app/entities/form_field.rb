@@ -1,5 +1,7 @@
 module Entities
   require_relative './enums/type_input'
+  require_relative './format_multiple_choice'
+  require 'pry'
 
   class FormField
     attr_reader :type_input, :name, :format_multiple_choice
@@ -12,8 +14,8 @@ module Entities
 
     private
 
-    def set_format_multiple_choice(format_multiple_choice)
-      @format_multiple_choice = format_multiple_choice if validate_type_input
+    def set_format_multiple_choice(format)
+      @format_multiple_choice = Entities::FormatMultipleChoice.new(format: format) if validate_type_input
     end
 
     def validate_type_input

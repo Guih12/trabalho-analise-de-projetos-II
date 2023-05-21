@@ -3,7 +3,7 @@ module Entities
   require_relative './form'
   require_relative './tag'
   class Orientation
-    attr_reader :teacher, :tags, :form
+    attr_reader :teacher, :tags, :form, :vacancy_with_scholarship, :vacancy_without_scholarship
 
     def initialize(validate:, vacancy_with_scholarship:, vacancy_without_scholarship:, url_edital:, teacher: nil)
       @id                          = SecureRandom.random_number(100)

@@ -11,7 +11,7 @@ RSpec.describe do
         let(:form_field) do
           Entities::FormField.new(type_input: Entities::Enums::TypeInput::TYPE[:MULTIPLE_CHOICE],
                                   name: 'xxx',
-                                  format_multiple_choice: Entities::FormatMultipleChoice.new(format: Entities::Enums::Format::TYPE[:UMA_OPCAO]))
+                                  format_multiple_choice: Entities::Enums::Format::TYPE[:UMA_OPCAO])
         end
 
         it 'retorna uma nova instancia de campo formulário e também uma relação com Formato Multipla Escolha' do
@@ -24,7 +24,7 @@ RSpec.describe do
         let(:form_field) do
           Entities::FormField.new(type_input: Entities::Enums::TypeInput::TYPE[:NUMBER_FIELD],
                                   name: 'xxx',
-                                  format_multiple_choice: Entities::FormatMultipleChoice.new(format: Entities::Enums::Format::TYPE[:UMA_OPCAO]))
+                                  format_multiple_choice: Entities::Enums::Format::TYPE[:UMA_OPCAO])
         end
 
         it 'retorna uma noa instancia de campo formulário e Formato Multiplica Escolha igual a nil' do

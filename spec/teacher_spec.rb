@@ -61,12 +61,16 @@ RSpec.describe Entities::Teacher do
 
       let(:form_fields) do
         [
-          Entities::FormField.new(type_input: Entities::Enums::TypeInput::TYPE[:MULTIPLE_CHOICE],
-                                  name: 'xxx',
-                                  format_multiple_choice: Entities::FormatMultipleChoice.new(format: Entities::Enums::Format::TYPE[:UMA_OPCAO])),
-          Entities::FormField.new(type_input: Entities::Enums::TypeInput::TYPE[:MULTIPLE_CHOICE],
-                                  name: 'xxx',
-                                  format_multiple_choice: Entities::FormatMultipleChoice.new(format: Entities::Enums::Format::TYPE[:UMA_OPCAO]))
+          {
+            type_input: Entities::Enums::TypeInput::TYPE[:MULTIPLE_CHOICE],
+            name: 'xxx',
+            format_multiple_choice: Entities::Enums::Format::TYPE[:UMA_OPCAO]
+          },
+          {
+            type_input: Entities::Enums::TypeInput::TYPE[:MULTIPLE_CHOICE],
+            name: 'xxx',
+            format_multiple_choice: Entities::Enums::Format::TYPE[:UMA_OPCAO]
+          }
         ]
       end
 
@@ -94,8 +98,8 @@ RSpec.describe Entities::Teacher do
 
       let(:tags) do
         [
-          Entities::Tag.new(description: 'Ciência de Dados'),
-          Entities::Tag.new(description: 'Visão Computacional')
+          'Ciência de Dados',
+          'Visão Computacional'
         ]
       end
 

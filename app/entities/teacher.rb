@@ -30,5 +30,9 @@ module Entities
 
       false
     end
+
+    def self.orientations(_word)
+      []
+    end
   end
 end
