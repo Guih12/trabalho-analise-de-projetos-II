@@ -1,6 +1,8 @@
 require_relative '../app/entities/format_multiple_choice'
 require_relative '../app/entities/enums/format'
 
+require 'spec_helper'
+
 RSpec.describe Entities::FormatMultipleChoice do
   describe '.new' do
     context 'quando receber um formato' do

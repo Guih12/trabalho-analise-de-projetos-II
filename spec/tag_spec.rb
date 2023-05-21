@@ -1,5 +1,7 @@
 require_relative '../app/entities/tag'
 
+require 'spec_helper'
+
 RSpec.describe Entities::Tag do
   describe '.new' do
     context 'quando receber uma descricão' do

@@ -2,6 +2,7 @@ require_relative '../app/entities/form_field'
 require_relative '../app/entities/format_multiple_choice'
 require_relative '../app/entities/enums/format'
 require_relative '../app/entities/enums/type_input'
+require 'spec_helper'
 
 RSpec.describe do
   describe '.new' do

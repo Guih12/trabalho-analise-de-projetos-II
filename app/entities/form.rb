@@ -11,13 +11,13 @@ module Entities
     end
 
     def add_form_fields(form_fields)
-      @form_fields << form_fields if validate_quantity_form_fields
+      form_fields.each { |form_field| @form_fields << form_field if validate_quantity_form_fields(form_fields) }
     end
 
     private
 
-    def validate_quantity_form_fields
-      @form_fields.size >= 1
+    def validate_quantity_form_fields(fields)
+      fields.size >= 1
     end
   end
 end
